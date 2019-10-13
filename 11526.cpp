@@ -13,10 +13,20 @@ typedef vector<ii> vii;
 #define ff first
 #define ss second
 
-int N, T, M, K;
+ll N, T, M, K;
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+	cin >> T;
+	forn(_, T){
+		cin >> N;
+		ll sum = 0, u = sqrt(N);
+		for(ll k = 1; k <= u; k++){
+			sum += N / k;
+		}
+		sum = (2 * sum) - u * u ;
+		cout << sum << endl;
+	}
     return 0;
 }
+

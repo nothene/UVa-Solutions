@@ -15,8 +15,29 @@ typedef vector<ii> vii;
 
 int N, T, M, K;
 
+int gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); }
+
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+	cin >> T; cin.ignore();
+	forn(i, T){
+		string s; vi V;
+		getline(cin, s);
+		istringstream iss(s);
+		while(iss.good()){
+			int num;
+			iss >> num;
+			V.pb(num);
+		}
+		int cur = 0;
+		for(int i = 0; i < V.size(); i++){
+			for(int j = 0; j < V.size(); j++){
+				if(i != j && V[i] != V[j]){
+					cur = max(cur, gcd(V[i], V[j]));
+				}
+			}
+		}
+		cout << cur << endl;
+	}
     return 0;
 }

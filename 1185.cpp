@@ -17,6 +17,14 @@ int N, T, M, K;
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+	cin >> T;
+	forn(_, T){
+		double ans = 0;
+		cin >> N;
+		for(int i = N; i >= 1; i--){
+			ans += log10(i);
+		}
+		cout << (int)ans + 1 << endl;
+	}
     return 0;
 }

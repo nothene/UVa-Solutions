@@ -17,6 +17,12 @@ int N, T, M, K;
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+ 	string s;
+	while(getline(cin, s)){
+		forn(i, s.size()){
+			cout << (char)(s[i]-7);
+		}
+		cout << endl;
+	}
     return 0;
 }

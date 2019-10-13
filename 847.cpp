@@ -13,10 +13,24 @@ typedef vector<ii> vii;
 #define ff first
 #define ss second
 
-int N, T, M, K;
+ll N, T, M, K;
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+	while(cin >> N){
+		bool stan = true;
+		ll P = 1;
+		while(P < N){
+			if(stan){
+				stan = 0;
+				P *= 9;
+			} else{
+				stan = 1;
+				P *= 2;
+			}
+		}
+		if(!stan) cout << "Stan wins.\n";
+		else cout << "Ollie wins.\n";
+	}
     return 0;
 }

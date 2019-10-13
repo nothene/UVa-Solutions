@@ -14,9 +14,14 @@ typedef vector<ii> vii;
 #define ss second
 
 int N, T, M, K;
+int lef[10000000];
+int righ[10000000];
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+
+    while(cin >> N){
+    	cout << lef[N] << "/" << righ[N] << endl;
+	}
     return 0;
 }

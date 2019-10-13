@@ -15,8 +15,24 @@ typedef vector<ii> vii;
 
 int N, T, M, K;
 
+int gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); }
+
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+	while(cin >> N){
+		if(N == 0) break;
+		vi V; V.pb(N);
+		while(cin >> N){
+			if(N == 0) break;
+			V.pb(N);
+		}
+		int cur = gcd(V[0], V[1]);
+		cout << V[0] << " " << V[1] << " " << cur << endl;
+		for(int i = 2; i < V.size(); i++){
+			cur = gcd(cur, V[i]);
+			cout << cur << endl;
+		}
+		cout << cur << endl;
+	}
     return 0;
 }

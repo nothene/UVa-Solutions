@@ -13,10 +13,16 @@ typedef vector<ii> vii;
 #define ff first
 #define ss second
 
-int N, T, M, K;
+ll N, T, M, K;
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+    while(cin >> N){
+ 		ll n = (N-1)/2 + 1;
+		ll sn = n * ((1+N) / 2);
+		ll a1 = 1 + (sn-3) * 2, a3 = 1 + (sn-1) * 2;
+		ll ans = 3 * ((a1 + a3) / 2);
+		cout << ans << endl;
+	}
     return 0;
 }

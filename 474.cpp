@@ -15,22 +15,24 @@ typedef vector<ii> vii;
 
 int N, T, M, K;
 
+vector< pair<double, int> > doubles(1000005);
+
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-	while(cin >> N){
-		if(N == 0) break;
-		int ans = 0, start = N + 3;
-		while(start >= N){
-			int coca = 0, bottle = start;
-			while(bottle > 3){
-				coca += bottle / 3;
-				bottle = (bottle / 3) + (bottle % 3);
-			}
-			//cout << "start: " << start << "coca: " << coca << " bottle: " << bottle << endl;
-			if(bottle >= abs(N-start)) ans = max(ans, coca);
-			start--;
+    doubles[1] = {5.0, 1};
+    double front; int exp;
+    for(int i = 2; i <= 1000000; i++){
+    	front = doubles[i-1].ff / 2.0;
+    	exp = doubles[i-1].ss;
+		if(front < 1.0){
+			front *= 10;
+			exp++;
 		}
-		cout << ans << endl;
+		doubles[i] = {front, exp};
+		//cout << doubles[i].ff << " " << doubles[i].ss << endl;
+    }
+	while(cin >> N){
+		printf("2^-%d = %.3lfe-%d\n", N, doubles[N].ff, doubles[N].ss);
 	}
     return 0;
 }

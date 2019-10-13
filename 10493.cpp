@@ -17,6 +17,15 @@ int N, T, M, K;
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+	while(cin >> N >> M){
+		if(N == 0 && M == 0) break;
+		cout << N << " " << M << " ";
+		if(N == 1 && M == 1) cout << "Multiple\n";
+		else if(N == 1) cout << "Impossible\n";
+		else if((M-1) % (N-1) == 0){
+			int cats = 1 + N * ((M-1) / (N-1));
+			cout << cats << endl;
+		} else cout << "Impossible\n";
+	}
     return 0;
 }

@@ -17,6 +17,17 @@ int N, T, M, K;
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+	while(cin >> N >> M >> K){
+		if(N == 0 && M == 0 && K == 0) break;
+		int r = (N-7) > 0 ? (N-7) : 0;
+		int c = (M-7) > 0 ? (M-7) : 0;
+		if(K == 1){
+			int ans = ceil((r * c) / 2.0);
+			cout << ans << endl;
+		} else{
+			int ans = (r * c) / 2;
+			cout << ans << endl;
+		}
+	}
     return 0;
 }

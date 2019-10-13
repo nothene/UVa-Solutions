@@ -14,9 +14,19 @@ typedef vector<ii> vii;
 #define ss second
 
 int N, T, M, K;
+bool first = 1;
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+	ll cat[20] = {0}; cat[0] = 1;
+	for(int i = 1; i <= 10; i++){
+		cat[i] = (2.0*i * (2.0*i-1)) / ((i+1.0) * i) * cat[i-1];
+		cout << cat[i] << endl;
+	} 
+	while(cin >> N){
+		if(!first) cout << endl;
+		cout << cat[N] << endl;
+		first = 0;
+	}
     return 0;
 }

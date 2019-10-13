@@ -17,6 +17,13 @@ int N, T, M, K;
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+	cin >> T;
+	forn(_, T){
+		int a, b, c, d;
+		cin >> a >> b >> c >> d;
+		cout << (((a ^ b) ^ c) ^ d) << endl;
+		if((a ^ b ^ c ^ d) == 0) cout << "Hansel\n";
+		else cout << "Gretel\n";
+	}
     return 0;
 }

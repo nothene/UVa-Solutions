@@ -17,6 +17,14 @@ int N, T, M, K;
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+	double deck[100005] = {0};
+	for(int i = 1; i <= 99999; i++){
+		deck[i] = deck[i-1] + (1.0/(i*2.0));
+		//cout << deck[i] << endl;
+	}
+	printf("# Cards Overhang\n");
+	while(cin >> N){
+		printf("%5d     %.3lf\n", N, deck[N]);
+	}
     return 0;
 }

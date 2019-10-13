@@ -17,6 +17,15 @@ int N, T, M, K;
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+ 	cin >> T;
+	forn(_, T)   {
+		cin >> N;
+		vi V(N);
+		forn(i, N) cin >> V[i];
+		sort(V.rbegin(), V.rend());
+		ll ans = 0;
+		for(int i = 2; i < V.size(); i+=3) ans += V[i];
+		cout << ans << endl;
+	}
     return 0;
 }

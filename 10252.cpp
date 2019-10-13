@@ -17,14 +17,19 @@ int main(){
     while(getline(cin, a) && getline(cin, b)){
         int na[300] = {0};
         int nb[300] = {0};
-        int len_a = a.size();
-        for(int i = 0; i < len_a; i++){
-            na[a[i]]++;
+        for(int i = 0; i < a.size(); i++){
+            if(a[i] != 32) na[a[i]]++;
         }
         int len_b = b.size();
-        for(int j = 0; j < len_b; j++){
-            nb[b[j]]++;
+        for(int j = 0; j < b.size(); j++){
+            if(b[j] != 32) nb[b[j]]++;
         }
+        for(char i = 'a'; i <= 'z'; i++){
+        	while(na[i] && nb[i]){
+				printf("%c", i);
+				na[i]--; nb[i]--;
+			}
+		}
         printf("\n");
     }
     return 0;

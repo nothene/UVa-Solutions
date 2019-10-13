@@ -15,8 +15,22 @@ typedef vector<ii> vii;
 
 int N, T, M, K;
 
+long mod(long a, long b)
+{ return (a%b+b)%b; }
+
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+    cin >> T;
+    forn(_, T){
+    	if(_ > 0) cout << endl;
+    	cin >> N;
+    	int i;
+    	for(i = 1; ; i++){
+    		if((i+1)/2.0*i >= abs(N) && ll((((i+1)/2.0*i)-abs(N))) % 2 == 0){
+    			break;
+			}
+		}
+		cout << i << endl;
+	}
     return 0;
 }

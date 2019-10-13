@@ -13,10 +13,19 @@ typedef vector<ii> vii;
 #define ff first
 #define ss second
 
-int N, T, M, K;
+ll N, T, M, K;
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+	while(cin >> N >> K){
+		long double ans = 0;
+		for(ll i = N-K+1; i <= N; i++){
+			ans += log10(i);
+		}
+		for(ll i = 2; i <= K; i++){
+			ans -= log10(i);
+		}
+		cout << ((ll)ans) + 1 << endl;
+	}
     return 0;
 }

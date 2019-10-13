@@ -15,8 +15,6 @@ using namespace std;
 
 int grid[3200][3200];
 
-
-
 int main(){
     ll n;
     while(cin>>n){

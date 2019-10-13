@@ -13,10 +13,15 @@ typedef vector<ii> vii;
 #define ff first
 #define ss second
 
-int N, T, M, K;
+ll N, T, M, K;
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+ 	while(cin >> N){
+ 		if(N == 0) break;
+		if(floor(sqrt(N)) == ceil(sqrt(N))){
+			cout << "yes\n";
+		} else cout << "no\n";
+	}
     return 0;
 }

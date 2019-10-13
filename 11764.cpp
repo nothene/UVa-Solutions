@@ -13,10 +13,23 @@ typedef vector<ii> vii;
 #define ff first
 #define ss second
 
-int N, T, M, K;
+int N, T, M, K, caseNo = 1;
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+    cin >> T;
+	forn(_, T){
+		cin >> N;
+		int hi = 0, lo = 0, prev = -1;
+		cin >> K; prev = K;
+		forn(_, N-1){
+			cin >> K;
+			if(prev < K) hi++;
+			else if(prev > K) lo++;
+			prev = K;
+		}
+		cout << "Case " << caseNo << ": " << hi << " " << lo << endl;
+		caseNo++;
+	}
     return 0;
 }

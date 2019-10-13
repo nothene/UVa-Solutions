@@ -17,6 +17,10 @@ int N, T, M, K;
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+	double p;
+	while(cin >> N >> p){
+		double ans = exp(log(p)/(double)N);
+		printf("%.0lf\n", ans);
+	}
     return 0;
 }

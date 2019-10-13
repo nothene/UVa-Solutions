@@ -17,6 +17,9 @@ int N, T, M, K;
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+	while(cin >> N >> M){
+		if(N == 0 && M == 0) break;
+		ll ans = ((N-1)/(1-M/100.0));
+	}
     return 0;
 }

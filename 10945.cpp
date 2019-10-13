@@ -17,6 +17,19 @@ int N, T, M, K;
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+ 	string s;
+	while(getline(cin, s)){
+		if(s == "DONE") break;
+		string t = "";
+		forn(i, s.size()){
+			if((s[i] <= 'Z' && s[i] >= 'A') || (s[i] <= 'z' && s[i] >= 'a')){
+				t += tolower(s[i]);
+			}
+		}
+		string u = t;
+		reverse(u.begin(), u.end());
+		if(u != t) cout << "Uh oh..\n";
+		else cout << "You won't be eaten!\n";
+	}
     return 0;
 }

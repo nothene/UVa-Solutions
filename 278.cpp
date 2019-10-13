@@ -17,6 +17,13 @@ int N, T, M, K;
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+	cin >> T;
+	forn(_, T){
+		string type; int r, c;
+		cin >> type >> r >> c;
+		if(type == "r"){
+			
+		}
+	}
     return 0;
 }
