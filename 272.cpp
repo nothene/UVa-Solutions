@@ -10,10 +10,14 @@ typedef vector<ii> vii;
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    int a, b; string s;
-    while(cin>>a>>b){
-        if(a == 0 || b == 0){ return 0; }
-        for(int i = 0; i < b; i++){
-        }
-    }
+    string s; int first = 1;
+    while(getline(cin, s)){
+    	for(int i = 0; i < s.size(); i++){
+    		if(s[i] == '"'){
+    			if(first == 1) cout << "``";
+    			else cout << "''";
+    			first = (first + 1) % 2;
+			} else cout << s[i];
+		} cout << endl;
+	}
 }
